@@ -111,6 +111,7 @@ body > button {
 }
 
 .title-player, .title-house{
+    transition-delay: .5s;
     width: 250px;
     position: absolute;
     top: -100px;
@@ -124,7 +125,6 @@ body > button {
 
 .title-house {
     left: -25px;
-    transition-delay: 3s;
 }
 
 #pentagon > #scissors {
@@ -264,8 +264,10 @@ body > button {
 }
 
 .show {
-    opacity: 1 !important;
-    display: initial !important;
+    opacity: 1;
+}
+.hide {
+    opacity: 0 ;
 }
 
 .position-1 {
@@ -283,12 +285,18 @@ body > button {
 
 .option-computer-select {
     opacity: 1 !important;
+    transition-delay: 1s;
+    transition-duration: .5s;
     width: 250px !important;
     height: 250px !important;
     bottom: 47px !important;
     right: -125px !important;
-    border-width: 30px !important;
+    left: inherit !important;
+    top: inherit !important;
     z-index: 1;
+}
+.border{
+    border-width: 30px !important;
 }
 
 #circle-picked {
@@ -301,4 +309,5 @@ body > button {
     top: 45px;
     right: -100px;
     opacity: 0;
+    transition-delay: .5s;
 }
